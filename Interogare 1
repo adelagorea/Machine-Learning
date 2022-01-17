@@ -1,0 +1,10 @@
+
+SELECT authors.name as author_name,
+	   papers.year as publish_year,
+	   papers.title as publish_title,
+	   papers.pdf_name as pdf_name,
+	   papers.abstract as  paper_abstract,
+	   papers.paper_text  
+	   
+FROM authors INNER JOIN paper_authors on authors.id = paper_authors.author_id
+			 INNER JOIN papers on papers.id = paper_authors.paper_id
